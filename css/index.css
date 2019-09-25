@@ -1,1 +1,386 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+@font-face {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Karla'), local('Karla-Regular'), url(https://fonts.gstatic.com/s/karla/v8/qkBbXvYC6trAT7RVLtk.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Homemade Apple';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Homemade Apple Regular'), local('HomemadeApple-Regular'), url(https://fonts.gstatic.com/s/homemadeapple/v10/Qw3EZQFXECDrI2q789EKQZJob0x6XH0.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Rock Salt';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Rock Salt Regular'), local('RockSalt-Regular'), url(https://fonts.gstatic.com/s/rocksalt/v10/MwQ0bhv11fWD6QsAVOZrt0M_.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Unna';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Unna Regular'), local('Unna-Regular'), url(https://fonts.gstatic.com/s/unna/v13/AYCEpXzofN0NOp8LkA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Syncopate';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Syncopate Bold'), local('Syncopate-Bold'), url(https://fonts.gstatic.com/s/syncopate/v11/pe0pMIuPIYBCpEV5eFdKvtKqBP5q.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Didact Gothic';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Didact Gothic Regular'), local('DidactGothic-Regular'), url(https://fonts.gstatic.com/s/didactgothic/v13/ahcfv8qz1zt6hCC5G4F_P4ASlUuYow.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Sigmar One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Sigmar One Regular'), local('SigmarOne-Regular'), url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6Tpow.ttf) format('truetype');
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1;
+}
+body .intro {
+  margin-bottom: 4%;
+}
+body .education {
+  margin-bottom: 4%;
+}
+body .work-history {
+  margin-bottom: 4%;
+}
+body .extracurricular {
+  margin-bottom: 4%;
+}
+body .skills {
+  margin-bottom: 4%;
+}
+body nav {
+  margin: 0% auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 16px;
+}
+body nav a {
+  padding: 1%;
+  margin: 0.5% auto;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  width: 18%;
+  text-align: center;
+}
+body nav a:hover {
+  font-size: 20px;
+}
+@media (max-width: 500px) {
+  body nav {
+    display: block;
+    font-size: 14px;
+  }
+  body nav a {
+    display: block;
+    padding-top: 4%;
+    width: 100%;
+    height: 50px;
+  }
+  body nav a:hover {
+    font-size: 14px;
+    background: white;
+    color: black;
+  }
+}
+body h1 {
+  font-family: 'Rock Salt', cursive;
+  font-size: 80px;
+  color: white;
+  text-decoration: bold;
+  text-align: center;
+  margin: 2% auto;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://images.pexels.com/photos/1585710/pexels-photo-1585710.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+}
+@media (max-width: 500px) {
+  body h1 {
+    font-size: 40px;
+  }
+}
+body h2 {
+  font-family: 'Rock Salt', cursive;
+  font-size: 30px;
+  text-decoration: underline;
+  margin: 1%;
+}
+@media (max-width: 500px) {
+  body h2 {
+    font-size: 20px;
+  }
+}
+body h2 p {
+  font-size: 12px;
+}
+@media (max-width: 500px) {
+  body h2 p {
+    font-size: 10px;
+  }
+}
+body h3 {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 25px;
+  text-decoration: bold;
+  margin: 1%;
+}
+@media (max-width: 500px) {
+  body h3 {
+    font-size: 18px;
+  }
+}
+body p {
+  margin: 2%;
+  font-family: 'Didact Gothic', sans-serif;
+  width: 80%;
+  font-size: 18px;
+}
+body p:hover {
+  background-color: lightyellow;
+  color: black;
+}
+@media (max-width: 500px) {
+  body p {
+    font-size: 14px;
+  }
+}
+body .location {
+  color: black;
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 14px;
+  margin: auto 1%;
+}
+@media (max-width: 500px) {
+  body .location {
+    font-size: 12px;
+  }
+}
+body .bold {
+  color: black;
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 14px;
+  margin: 1% 2%;
+  font-style: bold;
+}
+@media (max-width: 500px) {
+  body .bold {
+    font-size: 12px;
+  }
+}
+body .italics {
+  color: black;
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 14px;
+  margin: auto 2%;
+  font-style: italic;
+}
+@media (max-width: 500px) {
+  body .italics {
+    font-size: 12px;
+  }
+}
+body .date-range {
+  color: #818181;
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 14px;
+  margin: auto 1%;
+}
+@media (max-width: 500px) {
+  body .date-range {
+    font-size: 12px;
+  }
+}
+body ul {
+  list-style-type: disc;
+  font-family: 'Didact Gothic', sans-serif;
+  margin: 2% 6%;
+}
+body ul li:hover {
+  background-color: lightyellow;
+}
+@media (max-width: 500px) {
+  body ul li {
+    font-size: 12px;
+  }
+}
+body .contact-me {
+  background: black;
+  color: white;
+  height: 40%;
+  margin-top: 4%;
+  margin-right: 0%;
+  padding-top: 2%;
+  text-decoration: none;
+}
+body .contact-me p:hover {
+  color: white;
+  background-color: black;
+}
+body .contact-me p a {
+  text-decoration: none;
+  font-family: 'Didact Gothic', sans-serif;
+  color: white;
+}
+body .contact-me p a:hover {
+  color: white;
+}

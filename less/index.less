@@ -29,12 +29,21 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
+
+@background-color: black;
+@main-text-color: black;
+@grey-color: #818181;
+@title-font: 'Sigmar One', cursive;
+@content-font: 'Didact Gothic', sans-serif;
+@name-font: 'Rock Salt', cursive;
+@hover-color:lightyellow;
+
+@import url('https://fonts.googleapis.com/css?family=Karla|Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Homemade+Apple|Rock+Salt|Unna&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Syncopate:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sigmar+One&display=swap');
+
 blockquote, q {
 	quotes: none;
 }
@@ -54,6 +63,216 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
+body {
+	line-height: 1;
+
+	.intro{
+		margin-bottom: 4%;
+	}
+	.education{
+		margin-bottom: 4%;
+	}
+	.work-history{
+		margin-bottom: 4%;
+	}
+	.extracurricular{
+		margin-bottom: 4%;
+	}
+	.skills{
+		margin-bottom: 4%;
+	}
+	nav {
+		margin: 0% auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: @background-color;
+		font-family:@content-font;
+		font-size: 16px;
+
+		a{
+			padding: 1%;
+			margin: 0.5% auto;
+			border: 1px solid white;
+			border-radius: 5px;
+			color:white;
+			text-decoration: none;
+			width: 18%;
+			text-align: center;
+
+			&:hover{
+				font-size: 20px;
+			}	
+		}
+
+		@media(max-width: 500px){
+			display: block;
+			font-size: 14px;
+			a{
+				display: block;
+				padding-top: 4%;
+				width: 100%;
+				height: 50px;
+
+				&:hover{
+					font-size: 14px;
+					background: white;
+					color: @main-text-color;
+				}
+			}
+		}
+	}
+
+	h1 {
+		font-family: @name-font;
+		font-size: 80px;
+		color: white;
+		text-decoration: bold;
+		text-align: center;
+		margin: 2% auto;
+		width: 100%;
+		height: 20%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-image: url(https://images.pexels.com/photos/1585710/pexels-photo-1585710.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+
+		@media(max-width: 500px){
+			font-size: 40px;
+		}
+	}
+	h2{
+		font-family: @name-font;
+		font-size: 30px;
+		text-decoration: underline;
+		margin: 1%;
+
+		@media(max-width: 500px){
+			font-size: 20px;
+		}
+
+		p{
+			font-size: 12px;
+			@media(max-width: 500px){
+				font-size: 10px;
+			}
+		}
+	}
+	h3{
+		font-family: @content-font;
+		font-size: 25px;
+		text-decoration: bold;
+		margin: 1%;
+
+		@media(max-width: 500px){
+			font-size: 18px;
+		}
+	}
+	p{
+		margin: 2%;
+		font-family: @content-font;
+		width: 80%;
+		font-size: 18px;
+
+		&:hover{
+			background-color: @hover-color;
+			color: @main-text-color;
+		}
+
+		@media(max-width: 500px){
+			font-size: 14px;
+		}
+	}
+
+	.location{
+		color: @main-text-color;
+		font-family: @content-font;
+		font-size: 14px;
+		margin: auto 1%;
+
+		@media(max-width: 500px){
+			font-size: 12px;
+		}
+	}
+
+	.bold{
+		color: @main-text-color;
+		font-family: @content-font;
+		font-size: 14px;
+		margin: 1% 2%;
+		font-style: bold;
+
+		@media(max-width: 500px){
+			font-size: 12px;
+		}
+	}
+
+	.italics{
+		color: @main-text-color;
+		font-family: @content-font;
+		font-size: 14px;
+		margin: auto 2%;
+		font-style: italic;
+
+		@media(max-width: 500px){
+			font-size: 12px;
+		}
+	}
+	.date-range{
+		color: @grey-color;
+		font-family: @content-font;
+		font-size: 14px;
+		margin: auto 1%;
+
+		@media(max-width: 500px){
+			font-size: 12px;
+		}
+	}
+
+	ul{
+		list-style-type: disc;
+		font-family: @content-font;
+		margin: 2% 6%;
+
+		li{
+			&:hover{
+			background-color: @hover-color;
+			}
+			@media(max-width: 500px){
+				font-size: 12px;
+			}
+		}
+	}
+
+	.contact-me{
+		background: @main-text-color;
+		color: white; 
+		height: 40%;
+		margin-top: 4%;
+		margin-right: 0%;
+		padding-top: 2%;
+		text-decoration: none;
+		p{
+			&:hover{
+				color: white;
+				background-color: black;
+				}
+			a{
+				text-decoration: none;
+				font-family: @content-font;
+				color: white;
+		
+				&:hover{
+					color: white;
+				}
+
+			}
+		}
+	}
+}
+
+
+
 
